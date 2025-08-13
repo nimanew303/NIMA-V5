@@ -1,7 +1,7 @@
 {
   "name": "NIMA-V5",
   "version": "5.0.0",
-  "description": "A WhatsApp Bot Created By Mr Nima",
+  "description": "A WhatsApp Bot Created By Mr Shaban",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name NIMA-V5",
