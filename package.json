@@ -1,53 +1,104 @@
 {
-  "name": "NIMA-V5",
-  "version": "5.0.0",
-  "description": "A WhatsApp Bot Created By Mr Shaban",
-  "main": "index.js",
+  "name": "@drayyy/XD-Baileys",
+  "version": "1.0.2",
+  "description": "WhatsApp Beta",
+  "keywords": [
+    "whatsapp",
+    "js-whatsapp",
+    "whatsapp-api",
+    "whatsapp-web",
+    "whatsapp-chat",
+    "whatsapp-group",
+    "automation",
+    "multi-device"
+  ],
+  "homepage": "https://github.com/MRSHABAN45/@sk/Shaban-Baileys",
+  "repository": {
+    "url": "git@github.com:MRSHABAN45/@sk/Shaban-Baileys.git"
+  },
+  "license": "MIT",
+  "author": "MR SHABAN",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/*",
+    "WAProto/*.ts",
+    "WAProto/*.js",
+    "WASignalGroup/*.js"
+  ],
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name NIMA-V5",
-    "stop": "pm2 stop NIMA-V5",
-    "restart": "pm2 restart NIMA-V5"
+    "build:all": "tsc && typedoc",
+    "build:docs": "typedoc",
+    "build:tsc": "tsc",
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "example": "node --inspect -r ts-node/register Example/example.ts",
+    "gen:protobuf": "sh WAProto/GenerateStatics.sh",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "yarn lint --fix",
+    "prepack": "tsc",
+    "prepare": "tsc",
+    "release": "release-it",
+    "test": "jest"
   },
   "dependencies": {
-    "@whiskeysockets/baileys":"https://github.com/nimawpbot/NIMA-Baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
-    "@dark-yasiya/yt-dl.js": "1.0.5",
-    "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@vitalets/google-translate-api": "^9.2.0",
-    "@dark-yasiya/scrap": "1.0.1",
-    "pino": "^7.0.5",
-    "pm2": "^6.0.8",
-    "util": "^0.12.4",
-    "express": "^5.1.0",
-    "moment-timezone": "^0.6.0",
-    "axios": "^1.7.9",
-    "crypto-digest-sync": "^1.0.0",
-    "crypto-js": "^4.2.0",
-    "file_size_url": "1.0.4",
-    "fs-extra": "^11.1.0",
-    "ffmpeg": "^0.0.4",
-    "fluent-ffmpeg": "^2.1.0",
-    "form-data": "^4.0.0",
-    "google-tts-api": "^2.0.2",
-    "path": "^0.12.7",
-    "node-fetch": "^2.6.1",
-    "btch-downloader": "^2.2.9",
-    "megajs": "^1.1.7",
-    "pdfkit": "^0.17.1",
-    "wa_set_pkg": "1.0.5",
-    "wa-sticker-formatter": "^4.4.4",
-    "vm": "^0.1.0",
-    "adm-zip": "^0.5.16",
-    "cheerio": "^1.0.0-rc.12",
-    "ruhend-scraper": "8.0.3",
-    "qrcode-terminal": "^0.12.0",
-    "yt-search": "2.11.1",
-    "sequelize": "^6.37.5",
-    "sqlite3": "^5.1.7",
+    "@hapi/boom": "^9.1.3",
+    "@whiskeysockets/eslint-config": "github:whiskeysockets/eslint-config",
+    "async-lock": "^1.4.1",
+    "audio-decode": "^2.1.3",
+    "axios": "^1.6.0",
+    "cache-manager": "^6.4.2",
+    "libphonenumber-js": "^1.10.20",
+    "libsignal": "github:WhiskeySockets/libsignal-node",
+    "music-metadata": "^7.12.3",
+    "node-cache": "^5.1.2",
+    "pino": "^9.6",
+    "protobufjs": "^7.2.4",
+    "uuid": "^10.0.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/got": "^9.6.11",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.0.0",
+    "@types/sharp": "^0.29.4",
+    "@types/ws": "^8.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.0.0",
+    "jest": "^27.0.6",
     "jimp": "^0.16.1",
-    "api-dylux": "latest",
-    "@mrnima/tiktok-downloader": "1.0.0",
-    "@mrnima/facebook-downloader": "1.0.0",
-    "mrnima-moviedl": "1.0.0"
-  }
+    "json": "^11.0.0",
+    "link-preview-js": "^3.0.0",
+    "open": "^8.4.2",
+    "qrcode-terminal": "^0.12.0",
+    "release-it": "^15.10.3",
+    "sharp": "^0.32.6",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.8.1",
+    "typedoc": "^0.24.7",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+    "jimp": "^0.16.1",
+    "link-preview-js": "^3.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.32.6"
+  },
+  "peerDependenciesMeta": {
+    "jimp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    },
+    "qrcode-terminal": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@1.22.19"
 }
