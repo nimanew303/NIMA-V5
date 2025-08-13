@@ -1,7 +1,7 @@
 {
   "name": "NIMA-V5",
   "version": "5.0.0",
-  "description": "A WhatsApp Bot Created By Mr Shaban",
+  "description": "A WhatsApp Bot Created By Mr Nima",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name NIMA-V5",
@@ -9,7 +9,7 @@
     "restart": "pm2 restart NIMA-V5"
   },
   "dependencies": {
-    "@whiskeysockets/baileys":"https://github.com/nimanew303/NIMA-Baileys",
+    "@whiskeysockets/baileys":"https://github.com/nimawpbot/NIMA-Baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
